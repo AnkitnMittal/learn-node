@@ -2,6 +2,11 @@ const http = require('http');
 const fs = require('fs');
 const _ = require('lodash');
 
+const { loadEnvFile } = require('process');
+loadEnvFile('../.env');
+
+const PORT = process.env.PORT;
+
 const server = http.createServer((req, res) => {
     /* Lodash */
     const num = _.random(0, 20);
@@ -44,6 +49,6 @@ const server = http.createServer((req, res) => {
     });
 });
 
-server.listen(3000, 'localhost', () => {
-    console.log('Server is listening on http://localhost:3000');
+server.listen(PORT, 'localhost', () => {
+    console.log(`Server is listening on http://localhost:${PORT}`);
 });
