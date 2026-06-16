@@ -10,10 +10,6 @@ app.get("/about", (req, res) => {
     res.sendFile('./views/about.html', { root: __dirname });
 });
 
-app.get("/contact", (req, res) => {
-    res.send('<p>Contact Page</p>');
-});
-
 app.get("/about-us", (req, res) => {
     res.redirect(301, '/about');
 });
