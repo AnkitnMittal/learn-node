@@ -1,14 +1,17 @@
 const http = require('http');
 const fs = require('fs');
+const _ = require('lodash');
 
 const server = http.createServer((req, res) => {
-    console.log(req.url, req.method);
+    /* Lodash */
+    const num = _.random(0, 20);
+    console.log(num);
 
     /* Set header */
     res.setHeader('Content-Type', 'text/html');
 
     /* Set HTML endpoint path based on Web URL */
-    let path = './t3-http/views';
+    let path = './views';
     switch (req.url) {
         case '/':
             path += '/index.html';
