@@ -1,0 +1,21 @@
+{
+  "name": "t7-ejs",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "ejs": "^6.0.1",
+    "express": "^5.2.1",
+    "mongoose": "^9.7.0",
+    "morgan": "^1.11.0"
+  },
+  "devDependencies": {
+    "prettier-plugin-ejs": "^1.0.3"
+  }
+}
